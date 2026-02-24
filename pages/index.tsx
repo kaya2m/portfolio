@@ -32,7 +32,7 @@ const Portfolio = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ['home', 'about', 'skills', 'experience', 'projects', 'team', 'contact'];
+      const sections = ['home', 'about', 'projects', 'experience', 'skills', 'team', 'contact'];
       const scrollPosition = window.scrollY + 100;
 
       sections.forEach(section => {
@@ -235,7 +235,7 @@ const Portfolio = () => {
   const projects = [
     {
       title: "Ignisfer",
-      description: "Ignisfer, kampçılar için tasarlanmış bir sosyal medya ve blog platformudur. Uygulama, kullanıcıların kamp deneyimlerini paylaşmalarına, detaylı blog yazıları yazmalarına, kamp alanları hakkında bilgi edinmelerine ve benzer ilgi alanlarına sahip insanlarla bağlantı kurmalarına olanak tanır",
+      description: "Kampçılar için sosyal medya ve blog platformu. Kamp deneyimi paylaşımı, kamp alanı keşfi ve topluluk.",
       tech: [".NET Core","Python", "Azure", "Redis","RabbitMQ", "AWS", "MongoDB", "React Native", "PostgreSQL","Docker","GraphQL"],
       demo: "https://ignisfer.com/",
       github: "#",
@@ -243,35 +243,70 @@ const Portfolio = () => {
       isImageUrl: true
     },
     {
-      title: "KENT ERP",
-      description: "Fabrika içi operasyonel süreçleri ve müşteri ilişkilerini yöneten, Logo ERP entegrasyonu ile finans ve muhasebe işlemlerini merkezi hale getiren kurumsal bir uygulama geliştirdim. Satın alma, üretim, sevkiyat ve CRM süreçlerini dijitalleştirerek iş akışlarını hızlandırdım ve süreç verimliliğini artırdım.",
-      tech: ["ASP.NET MVC","Angular.JS", "MSSQL / T-SQL", "Bootstrap", "Entity Framework", "IIS"],
-      demo: "https://erp.ilkeambalaj.com/",
+      title: "Tripinyo",
+      description: "Seyahat rotalarını oluşturmak ve optimize etmek için tasarlanmış modern bir platform.",
+      tech: ["Node.js", "Express.js", "PostgreSQL", "Prisma", "React Native", "React", "Next.js"],
+      demo: "https://tripinyo.com/",
       github: "#",
-      image: "https://media.licdn.com/dms/image/v2/C4D0BAQFWN6coW_NxKg/company-logo_200_200/company-logo_200_200/0/1630474335550?e=1759968000&v=beta&t=MB-RCCEUGZMK0hzV5TGkLVMrjGNKOcPj_RkdQD6n3u0",
-      isImageUrl: false
+      image: "https://tripinyo.com/logo.png",
+      isImageUrl: true
     },
-  {
-      title: "Ignisfer Manage - Kamp Yönetim Sistemi",
-      description: " Ignisfer Manage, kamp işletmecileri için tasarlanmış kapsamlı bir kamp yönetim sistemidir. Bu uygulama, kamp rezervasyonlarını, müşteri ilişkilerini ve operasyonel süreçleri tek bir platformda yönetmeyi kolaylaştırır. Kullanıcı dostu arayüzü ve güçlü özellikleriyle kamp sahiplerine işlerini daha verimli ve etkili bir şekilde yürütme imkanı sunar.",
-      tech: ["React", ".NET Core", "PostgreSQL","Docker","Çok Kiracılı Mimari","CQRS", "Event Sourcing", "Redis", "RabbitMQ"],
-      demo: "https://github.com/kaya2m/net-bys",
+    {
+      title: "Promenucu",
+      description: "Restoranlar ve işletmeler için dijital menü oluşturma ve yönetme SaaS platformu.",
+      tech: [".NET", "MSSQL", "Entity Framework", "React", "Next.js"],
+      demo: "https://promenucu.com",
+      github: "#",
+      image: "https://www.promenucu.com/images/logos/promenucu.png",
+      isImageUrl: true
+    },
+    {
+      title: "Creo Studio",
+      description: "No-code/low-code uygulama geliştirme platformu. Studio ile tasarla, Runtime ile çalıştır.",
+      tech: ["No-Code", "Low-Code", "React", "Next.js"],
+      demo: "https://creo-studio.vercel.app/",
+      github: "#",
+      extraLink: { label: "Runtime", href: "https://creo-runtime.vercel.app/login" },
+      image: "https://creo-studio.vercel.app/creo-logo.png",
+      isImageUrl: true
+    },
+    {
+      title: "Ignisfer Manage",
+      description: "Kamp işletmecileri için rezervasyon, müşteri ilişkileri ve operasyonel süreç yönetim sistemi.",
+      tech: ["React", ".NET Core", "PostgreSQL","Docker","CQRS", "Event Sourcing", "Redis", "RabbitMQ"],
+      demo: "https://manage.ignisfer.com",
       github: "#",
       image: "https://ignisfer.com/logo/ignisfer-logo.svg"
     },
     {
-      title: "ASD Soft V2 ",
-      description: "ASD Soft V2, üretim süreçlerini optimize etmek ve verimliliği artırmak için tasarlanmış kapsamlı bir üretim yönetim/takip çözümüdür. Bu uygulama, üretim planlaması, malzeme yönetimi, kalite kontrol ve iş gücü yönetimi gibi temel işlevleri entegre ederek işletmelerin operasyonel verimliliğini artırmalarına yardımcı olur.",
-      tech: [".NET Core", "DevExpress", "SQL Server","SAP HANA" ,"MSSQL", "Angular 15-17", "Docker", "Azure"],
+      title: "KENT ERP",
+      description: "Fabrika içi operasyonel süreçleri ve müşteri ilişkilerini yöneten, Logo ERP entegrasyonlu kurumsal uygulama.",
+      tech: ["ASP.NET MVC","Angular.JS", "MSSQL / T-SQL", "Bootstrap", "Entity Framework", "IIS"],
+      demo: "https://erp.ilkeambalaj.com/",
       github: "#",
-      image: "https://avatars.githubusercontent.com/u/192769476?s=200&v=4"
+      image: "https://ilkeambalaj.com/wp-content/uploads/2019/01/ilke-big-logo.png",
+      isImageUrl: true
+    },
+    {
+      title: "ASD Soft V2",
+      description: "Üretim planlaması, malzeme yönetimi, kalite kontrol ve iş gücü yönetimini entegre eden üretim takip çözümü.",
+      tech: [".NET Core", "DevExpress", "SAP HANA", "MSSQL", "Angular 15-17", "Docker", "Azure"],
+      github: "#",
+      image: "https://www.asdlaminat.com/assets/2018/10/logo-asd-laminate.png"
     }
   ];
 
   return (
-    <div className="min-h-screen bg-slate-900 text-white overflow-x-hidden">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-950 to-purple-950 text-white overflow-x-hidden">
+      {/* Arka plan dekoratif blob'lar */}
+      <div className="fixed inset-0 overflow-hidden pointer-events-none z-0">
+        <div className="absolute -top-40 -left-40 w-96 h-96 bg-blue-600/20 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute top-1/3 -right-40 w-96 h-96 bg-purple-600/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
+        <div className="absolute bottom-1/4 left-1/4 w-80 h-80 bg-pink-600/10 rounded-full blur-3xl animate-pulse delay-2000"></div>
+        <div className="absolute bottom-0 right-1/3 w-72 h-72 bg-indigo-600/15 rounded-full blur-3xl animate-pulse delay-500"></div>
+      </div>
       {/* Navigation */}
-      <nav className="fixed top-0 w-full bg-slate-900/95 backdrop-blur-sm z-50 border-b border-slate-800">
+      <nav className="fixed top-0 w-full bg-white/5 backdrop-blur-xl z-50 border-b border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center py-4">
         <div className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
@@ -283,17 +318,17 @@ const Portfolio = () => {
               {[
                 {id: 'home', label: 'Ana Sayfa'},
                 {id: 'about', label: 'Hakkımda'},
-                {id: 'skills', label: 'Yetenekler'},
-                {id: 'experience', label: 'Deneyim'},
                 {id: 'projects', label: 'Projeler'},
+                {id: 'experience', label: 'Deneyim'},
+                {id: 'skills', label: 'Yetenekler'},
                 {id: 'team', label: 'Takım'},
                 {id: 'contact', label: 'İletişim'}
               ].map((item) => (
                 <button
                   key={item.id}
                   onClick={() => scrollToSection(item.id)}
-                  className={`capitalize transition-colors duration-300 hover:text-blue-400 ${
-                    activeSection === item.id ? 'text-blue-400' : 'text-gray-300'
+                  className={`capitalize transition-colors duration-300 hover:text-blue-300 font-medium ${
+                    activeSection === item.id ? 'text-blue-300' : 'text-white/80'
                   }`}
                 >
                   {item.label}
@@ -313,21 +348,21 @@ const Portfolio = () => {
 
         {/* Mobile Menu */}
         {isMenuOpen && (
-          <div className="md:hidden bg-slate-800 border-t border-slate-700">
+          <div className="md:hidden bg-slate-900/80 backdrop-blur-xl border-t border-white/10">
             <div className="px-4 py-2 space-y-2">
               {[
                 {id: 'home', label: 'Ana Sayfa'},
                 {id: 'about', label: 'Hakkımda'},
-                {id: 'skills', label: 'Yetenekler'},
-                {id: 'experience', label: 'Deneyim'},
                 {id: 'projects', label: 'Projeler'},
+                {id: 'experience', label: 'Deneyim'},
+                {id: 'skills', label: 'Yetenekler'},
                 {id: 'team', label: 'Takım'},
                 {id: 'contact', label: 'İletişim'}
               ].map((item) => (
                 <button
                   key={item.id}
                   onClick={() => scrollToSection(item.id)}
-                  className="block w-full text-left py-2 px-3 rounded hover:bg-slate-700 transition-colors"
+                  className="block w-full text-left py-2 px-3 rounded hover:bg-white/10 transition-colors text-white/80"
                 >
                   {item.label}
                 </button>
@@ -338,12 +373,7 @@ const Portfolio = () => {
       </nav>
 
    {/* Hero Section */}
-      <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden pt-20 md:pt-24">
-        <div className="absolute inset-0 bg-gradient-to-br from-blue-900/20 to-purple-900/20"></div>
-        <div className="absolute inset-0">
-          <div className="absolute top-20 left-20 w-72 h-72 bg-blue-500/10 rounded-full blur-3xl animate-pulse"></div>
-          <div className="absolute bottom-20 right-20 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
-        </div>
+      <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden pt-20 md:pt-24 z-10">
         
         <div className="z-10 px-4 w-full">
           <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between">
@@ -352,26 +382,48 @@ const Portfolio = () => {
               <h1 className="text-4xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent animate-pulse">
                 Muhammet Kaya  <span className="text-purple-400">Yazılım Uzmanı</span>
               </h1>
-              <p className="text-lg md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto md:mx-0">
-                ASP.NET, Angular, Node.Js ve modern web teknolojileri ile <br />
-                <span className="text-blue-400">ERP, CRM, MES</span> ve <span className="text-purple-400">Sosyal Medya</span> sistemleri geliştiriyorum
+              <p className="text-lg md:text-xl text-white/70 mb-4 max-w-3xl mx-auto md:mx-0">
+                Fikri olan her projeyi hayata geçiririm —
+              </p>
+              <div className="flex flex-wrap justify-center md:justify-start gap-3 mb-8">
+                {[
+                  { label: 'ERP & CRM', color: 'from-blue-500/30 to-blue-600/20 border-blue-400/40 text-blue-300' },
+                  { label: 'MES & Üretim', color: 'from-cyan-500/30 to-cyan-600/20 border-cyan-400/40 text-cyan-300' },
+                  { label: 'SaaS Platform', color: 'from-purple-500/30 to-purple-600/20 border-purple-400/40 text-purple-300' },
+                  { label: 'Mobil Uygulama', color: 'from-pink-500/30 to-pink-600/20 border-pink-400/40 text-pink-300' },
+                  { label: 'Sosyal Medya', color: 'from-violet-500/30 to-violet-600/20 border-violet-400/40 text-violet-300' },
+                  { label: 'No-Code / Low-Code', color: 'from-emerald-500/30 to-emerald-600/20 border-emerald-400/40 text-emerald-300' },
+                ].map((item) => (
+                  <span
+                    key={item.label}
+                    className={`px-4 py-1.5 bg-gradient-to-r ${item.color} rounded-full text-sm font-medium border backdrop-blur-sm`}
+                  >
+                    {item.label}
+                  </span>
+                ))}
+              </div>
+              <p className="text-base text-white/50 mb-8 max-w-2xl mx-auto md:mx-0">
+                .NET · Node.js · Angular · React · React Native · PostgreSQL · Azure
               </p>
               <div className="flex justify-center md:justify-start space-x-6 mb-12">
-                <a href="https://github.com/kaya2m" className="p-3 bg-blue-600/20 rounded-full hover:bg-blue-600/30 transition-all duration-300 hover:scale-110">
+                <a href="https://github.com/kaya2m" className="p-3 bg-white/10 backdrop-blur-sm rounded-full hover:bg-white/20 border border-white/20 transition-all duration-300 hover:scale-110">
                   <Github className="w-6 h-6" />
                 </a>
-                <a href="https://www.linkedin.com/in/muhammet-kaya-60b36b213/" className="p-3 bg-blue-600/20 rounded-full hover:bg-blue-600/30 transition-all duration-300 hover:scale-110">
+                <a href="https://www.linkedin.com/in/muhammet-kaya-ln" className="p-3 bg-white/10 backdrop-blur-sm rounded-full hover:bg-white/20 border border-white/20 transition-all duration-300 hover:scale-110">
                   <Linkedin className="w-6 h-6" />
                 </a>
-                <a href="mailto:mkaya349@hotmail.com" className="p-3 bg-blue-600/20 rounded-full hover:bg-blue-600/30 transition-all duration-300 hover:scale-110">
+                <a href="mailto:mkaya349@hotmail.com" className="p-3 bg-white/10 backdrop-blur-sm rounded-full hover:bg-white/20 border border-white/20 transition-all duration-300 hover:scale-110">
                   <Mail className="w-6 h-6" />
+                </a>
+                <a href="https://ignisfer.com/muhammetkaya" target="_blank" rel="noopener noreferrer" className="p-1.5 bg-white/10 backdrop-blur-sm rounded-full hover:bg-white/20 border border-white/20 transition-all duration-300 hover:scale-110">
+                  <img src="https://ignisfer.com/favicon.ico" alt="Ignisfer" className="w-6 h-6 rounded-full" />
                 </a>
               </div>
             </div>
             {/* Profil Fotoğrafı */}
             <div className="md:w-1/3 w-full flex justify-center md:justify-end mt-8 md:mt-0">
               <div className="w-64 h-64 md:w-80 md:h-80 rounded-full bg-gradient-to-br from-blue-500 to-purple-600 p-1">
-                <div className="w-full h-full rounded-full bg-slate-900 flex items-center justify-center overflow-hidden">
+                <div className="w-full h-full rounded-full bg-slate-800 flex items-center justify-center overflow-hidden">
                   <img src="/kisisel-foto.jpg" alt="Muhammet Kaya" className="w-full h-full object-cover rounded-full" />
                 </div>
               </div>
@@ -390,7 +442,7 @@ const Portfolio = () => {
         </div>
       </section>
       {/* About Section */}
-      <section id="about" className="py-20 px-4">
+      <section id="about" className="py-20 px-4 relative z-10">
         <div className="max-w-6xl mx-auto">
           <h2 
             data-animate="fade-up"
@@ -409,10 +461,10 @@ const Portfolio = () => {
               }`}
               id="about-content"
             >
-              <p className="text-lg text-gray-300 leading-relaxed">
+              <p className="text-lg text-slate-100 leading-relaxed">
                 Ben Muhammet, Yazılım Geliştirme Uzmanı&apos;yım. Bursa Uludağ Üniversitesi&apos;nden mezun oldum. Yaklaşık 4 yıldır yazılım ekosisteminin bir parçasıyım ve sürekli öğrenme ve gelişme tutkusuyla kendimi geliştiriyorum. Hem kendimi hem de üstlendiğim görevleri en iyi şekilde geliştirerek, hem kendime hem de projelerimle şirkete değer katmaya devam ediyorum.
               </p>
-              <p className="text-lg text-gray-300 leading-relaxed">
+              <p className="text-lg text-slate-100 leading-relaxed">
                 Microsoft teknolojileri (.NET, SQL Server) ve modern frontend frameworkler (Angular, React) 
                 ile ölçeklenebilir ve performanslı web uygulamaları tasarlayıp geliştiriyorum.
               </p>
@@ -420,7 +472,7 @@ const Portfolio = () => {
                 {['ERP Sistemleri', 'CRM Çözümleri', 'MES Uygulamaları', 'Bina Yönetimi', 'Sosyal Medya'].map((tag, index) => (
                   <span 
                     key={tag} 
-                    className={`px-4 py-2 bg-blue-600/20 rounded-full text-sm border border-blue-500/30 transition-all duration-500`}
+                    className={`px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full text-sm border border-white/20 hover:bg-white/20 transition-all duration-500`}
                     style={{ animationDelay: `${index * 100}ms` }}
                   >
                     {tag}
@@ -437,7 +489,7 @@ const Portfolio = () => {
               }`}
               id="about-image"
             >
-              <div className="w-80 h-80 mx-auto bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-2xl p-8 backdrop-blur-sm border border-white/10">
+              <div className="w-80 h-80 mx-auto bg-white/10 backdrop-blur-md rounded-2xl p-8 border border-white/20 shadow-xl">
                 <div className="w-full h-full bg-gradient-to-br from-blue-600 to-purple-600 rounded-xl flex items-center justify-center">
                   <img src="/avatar-kisisel.png" alt="" />
                 </div>
@@ -447,34 +499,72 @@ const Portfolio = () => {
         </div>
       </section>
 
-      {/* Skills Section */}
-   <section id="skills" className="py-20 px-4 bg-slate-800/50">
-        <div className="max-w-6xl mx-auto">
-          <h2 
+      {/* Projects Section */}
+      <section id="projects" className="py-20 px-4 relative z-10">
+        <div className="max-w-7xl mx-auto">
+          <h2
             data-animate="fade-up"
             className={`text-4xl font-bold text-center mb-16 bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent transition-all duration-1000 ${
-              visibleElements.has('skills-title') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+              visibleElements.has('projects-title') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
             }`}
-            id="skills-title"
+            id="projects-title"
           >
-            Teknik Yetenekler
+            Projelerim
           </h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {skills.map((skill, index) => (
-              <div 
-                key={skill.name} 
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+            {projects.map((project, index) => (
+              <div
+                key={index}
                 data-animate="fade-up"
-                className={`bg-slate-800/50 p-6 rounded-xl border border-slate-700/50 hover:border-blue-500/50 transition-all duration-500 hover:transform hover:scale-105 ${
-                  visibleElements.has(`skill-${index}`) ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+                className={`bg-white/10 backdrop-blur-md rounded-xl overflow-hidden border border-white/20 hover:border-blue-400/60 hover:bg-white/15 transition-all duration-500 hover:transform hover:scale-105 flex flex-col shadow-lg ${
+                  visibleElements.has(`project-${index}`) ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
                 }`}
-                id={`skill-${index}`}
-                style={{ transitionDelay: `${index * 100}ms` }}
+                id={`project-${index}`}
+                style={{ transitionDelay: `${index * 150}ms` }}
               >
-                <div className="flex items-center mb-4">
-                  <div className="p-2 bg-blue-600/20 rounded-lg mr-3">
-                    {skill.icon}
+                <div className="h-28 flex items-center justify-center bg-white/10 border-b border-white/10 px-4 py-3">
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    className="max-h-full max-w-full object-contain"
+                    onError={(e) => { e.currentTarget.style.display = 'none'; }}
+                  />
+                </div>
+                <div className="p-4 flex flex-col flex-1">
+                  <h3 className="text-base font-bold mb-2 text-white">{project.title}</h3>
+                  <p className="text-white/60 text-xs mb-3 leading-relaxed flex-1">{project.description}</p>
+                  <div className="flex flex-wrap gap-1 mb-3">
+                    {project.tech.slice(0, 4).map((tech) => (
+                      <span key={tech} className="px-2 py-0.5 bg-white/10 rounded-full text-xs border border-white/20">
+                        {tech}
+                      </span>
+                    ))}
+                    {project.tech.length > 4 && (
+                      <span className="px-2 py-0.5 bg-white/5 rounded-full text-xs text-white/50">
+                        +{project.tech.length - 4}
+                      </span>
+                    )}
                   </div>
-                  <h3 className="text-xl font-semibold">{skill.name}</h3>
+                  <div className="flex space-x-3 flex-wrap gap-y-1">
+                    {project.github && project.github !== "#" && (
+                      <a href={project.github} className="flex items-center text-blue-400 hover:text-blue-300 transition-colors text-xs">
+                        <Github className="w-3 h-3 mr-1" />
+                        Kod
+                      </a>
+                    )}
+                    {project.demo && project.demo !== "#" && (
+                      <a href={project.demo} target="_blank" rel="noopener noreferrer" className="flex items-center text-purple-400 hover:text-purple-300 transition-colors text-xs">
+                        <ExternalLink className="w-3 h-3 mr-1" />
+                        {project.extraLink ? "Studio" : "Demo"}
+                      </a>
+                    )}
+                    {project.extraLink && (
+                      <a href={project.extraLink.href} target="_blank" rel="noopener noreferrer" className="flex items-center text-pink-400 hover:text-pink-300 transition-colors text-xs">
+                        <ExternalLink className="w-3 h-3 mr-1" />
+                        {project.extraLink.label}
+                      </a>
+                    )}
+                  </div>
                 </div>
               </div>
             ))}
@@ -483,7 +573,7 @@ const Portfolio = () => {
       </section>
 
       {/* Experience Section */}
-      <section id="experience" className="py-20 px-4">
+      <section id="experience" className="py-20 px-4 relative z-10 bg-white/5 backdrop-blur-sm">
         <div className="max-w-6xl mx-auto">
           <h2 
             data-animate="fade-up"
@@ -499,7 +589,7 @@ const Portfolio = () => {
               <div 
                 key={index}
                 data-animate="fade-up"
-                className={`bg-slate-800/50 rounded-xl p-8 border border-slate-700/50 hover:border-blue-500/50 transition-all duration-500 ${
+                className={`bg-white/10 backdrop-blur-md rounded-xl p-5 md:p-8 border border-white/20 hover:border-blue-400/60 hover:bg-white/15 transition-all duration-500 shadow-lg ${
                   visibleElements.has(`exp-${index}`) ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
                 }`}
                 id={`exp-${index}`}
@@ -512,7 +602,7 @@ const Portfolio = () => {
                         <img
                           src={exp.logo}
                           alt={`${exp.company} logo`}
-                          className="w-10 h-10 object-contain rounded bg-white p-1 mr-3 border border-slate-700"
+                          className="w-10 h-10 object-contain rounded bg-white p-1 mr-3 border border-white/30"
                           style={{ background: "#fff" }}
                         />
                       )}
@@ -523,23 +613,23 @@ const Portfolio = () => {
                         <p className="text-blue-400 font-semibold mb-2">{exp.position}</p>
                       </div>
                     </div>
-                    <div className="flex items-center text-gray-400 text-sm mb-2">
+                    <div className="flex items-center text-white/60 text-sm mb-2">
                       <Calendar className="w-4 h-4 mr-1" />
                       {exp.period}
                     </div>
-                    <div className="flex items-center text-gray-400 text-sm">
+                    <div className="flex items-center text-white/60 text-sm">
                       <MapPin className="w-4 h-4 mr-1" />
                       {exp.location}
                     </div>
                   </div>
                   <div className="md:col-span-2">
-                    <p className="text-gray-300 mb-4">{exp.description}</p>
+                    <p className="text-white/75 mb-4">{exp.description}</p>
                     
                     <div className="mb-4">
                       <h4 className="text-white font-semibold mb-2">Kullanılan Teknolojiler:</h4>
                       <div className="flex flex-wrap gap-2">
                         {exp.technologies.map((tech) => (
-                          <span key={tech} className="px-3 py-1 bg-blue-600/20 rounded-full text-sm border border-blue-500/30">
+                          <span key={tech} className="px-3 py-1 bg-white/10 rounded-full text-sm border border-white/20">
                             {tech}
                           </span>
                         ))}
@@ -550,7 +640,7 @@ const Portfolio = () => {
                       <h4 className="text-white font-semibold mb-2">Başarılar:</h4>
                       <ul className="space-y-1">
                         {exp.achievements.map((achievement, i) => (
-                          <li key={i} className="text-gray-300 text-sm flex items-start">
+                          <li key={i} className="text-white/75 text-sm flex items-start">
                             <span className="text-blue-400 mr-2">•</span>
                             {achievement}
                           </li>
@@ -565,61 +655,34 @@ const Portfolio = () => {
         </div>
       </section>
 
-     
-      {/* Projects Section */}
-      <section id="projects" className="py-20 px-4 bg-slate-800/50">
-        <div className="max-w-7xl mx-auto">
-          <h2 
+      {/* Skills Section */}
+      <section id="skills" className="py-20 px-4 relative z-10">
+        <div className="max-w-6xl mx-auto">
+          <h2
             data-animate="fade-up"
             className={`text-4xl font-bold text-center mb-16 bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent transition-all duration-1000 ${
-              visibleElements.has('projects-title') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+              visibleElements.has('skills-title') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
             }`}
-            id="projects-title"
+            id="skills-title"
           >
-            Projelerim
+            Teknik Yetenekler
           </h2>
-          <div className="grid md:grid-cols-2 gap-8">
-            {projects.map((project, index) => (
-              <div 
-                key={index} 
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {skills.map((skill, index) => (
+              <div
+                key={skill.name}
                 data-animate="fade-up"
-                className={`bg-slate-800/50 rounded-xl overflow-hidden border border-slate-700/50 hover:border-blue-500/50 transition-all duration-500 hover:transform hover:scale-105 ${
-                  visibleElements.has(`project-${index}`) ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+                className={`bg-white/10 backdrop-blur-md p-6 rounded-xl border border-white/20 hover:border-blue-400/60 hover:bg-white/15 transition-all duration-500 hover:transform hover:scale-105 shadow-lg ${
+                  visibleElements.has(`skill-${index}`) ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
                 }`}
-                id={`project-${index}`}
-                style={{ transitionDelay: `${index * 150}ms` }}
+                id={`skill-${index}`}
+                style={{ transitionDelay: `${index * 100}ms` }}
               >
-                <div className="h-48 flex items-center justify-center relative overflow-hidden bg-white">
-                  <img 
-                    src={project.image} 
-                    alt={project.title}
-                    className="w-full h-full object-contain p-4"
-                  />
-                </div>
-                <div className="p-6">
-                  <h3 className="text-xl font-bold mb-3">{project.title}</h3>
-                  <p className="text-gray-300 mb-4">{project.description}</p>
-                  <div className="flex flex-wrap gap-2 mb-4">
-                    {project.tech.map((tech) => (
-                      <span key={tech} className="px-3 py-1 bg-blue-600/20 rounded-full text-sm border border-blue-500/30">
-                        {tech}
-                      </span>
-                    ))}
+                <div className="flex items-center mb-4">
+                  <div className="p-2 bg-white/10 rounded-lg mr-3 border border-white/20">
+                    {skill.icon}
                   </div>
-                  <div className="flex space-x-4">
-                    {project.github && (
-                      <a href={project.github} className="flex items-center text-blue-400 hover:text-blue-300 transition-colors">
-                        <Github className="w-4 h-4 mr-2" />
-                        Kod
-                      </a>
-                    )}
-                    {project.demo && project.demo !== "#" && (
-                      <a href={project.demo} className="flex items-center text-purple-400 hover:text-purple-300 transition-colors">
-                        <ExternalLink className="w-4 h-4 mr-2" />
-                        Demo
-                      </a>
-                    )}
-                  </div>
+                  <h3 className="text-xl font-semibold">{skill.name}</h3>
                 </div>
               </div>
             ))}
@@ -628,7 +691,7 @@ const Portfolio = () => {
       </section>
 
       {/* Team Section */}
-      <section id="team" className="py-20 px-4">
+      <section id="team" className="py-20 px-4 relative z-10 bg-white/5 backdrop-blur-sm">
         <div className="max-w-6xl mx-auto">
           <h2 
             data-animate="fade-up"
@@ -645,7 +708,7 @@ const Portfolio = () => {
                 <div 
                   key={index}
                   data-animate="fade-up"
-                  className={`bg-slate-800/50 rounded-xl p-6 border border-slate-700/50 hover:border-blue-500/50 transition-all duration-500 hover:transform hover:scale-105 text-center ${
+                  className={`bg-white/10 backdrop-blur-md rounded-xl p-6 border border-white/20 hover:border-blue-400/60 hover:bg-white/15 transition-all duration-500 hover:transform hover:scale-105 text-center shadow-lg ${
                     visibleElements.has(`team-${index}`) ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
                   }`}
                   id={`team-${index}`}
@@ -679,19 +742,19 @@ const Portfolio = () => {
                   <p className="text-blue-400 font-semibold mb-4">{member.role}</p>
                   <div className="flex flex-wrap gap-1 justify-center mb-4">
                     {member.skills.map((skill) => (
-                      <span key={skill} className="px-2 py-1 bg-blue-600/20 rounded text-xs border border-blue-500/30">
+                      <span key={skill} className="px-2 py-1 bg-white/10 rounded text-xs border border-white/20">
                         {skill}
                       </span>
                     ))}
                   </div>
                   <div className="flex justify-center space-x-3">
-                    <a href={member.linkedin} className="p-2 bg-blue-600/20 rounded-full hover:bg-blue-600/30 transition-colors">
+                    <a href={member.linkedin} className="p-2 bg-white/10 rounded-full hover:bg-white/20 border border-white/20 transition-colors">
                       <Linkedin className="w-4 h-4" />
                     </a>
-                    <a href={member.github} className="p-2 bg-blue-600/20 rounded-full hover:bg-blue-600/30 transition-colors">
+                    <a href={member.github} className="p-2 bg-white/10 rounded-full hover:bg-white/20 border border-white/20 transition-colors">
                       <Github className="w-4 h-4" />
                     </a>
-                    <a href={member.portfolio} className="p-2 bg-purple-600/20 rounded-full hover:bg-purple-600/30 transition-colors">
+                    <a href={member.portfolio} className="p-2 bg-white/10 rounded-full hover:bg-white/20 border border-white/20 transition-colors">
                       <ExternalLink className="w-4 h-4" />
                     </a>
                   </div>
@@ -703,7 +766,7 @@ const Portfolio = () => {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="py-20 px-4 bg-slate-800/50">
+      <section id="contact" className="py-20 px-4 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
           <h2 
             data-animate="fade-up"
@@ -716,18 +779,19 @@ const Portfolio = () => {
           </h2>
           <p 
             data-animate="fade-up"
-            className={`text-xl text-gray-300 mb-12 transition-all duration-1000 delay-200 ${
+            className={`text-xl text-white/70 mb-12 transition-all duration-1000 delay-200 ${
               visibleElements.has('contact-subtitle') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
             }`}
             id="contact-subtitle"
           >
             Yeni projeler için birlikte çalışalım!
           </p>
-          <div className="flex justify-center space-x-8 mb-12">
+          <div className="flex flex-wrap justify-center gap-8 mb-12">
             {[
               { icon: <Github className="w-8 h-8" />, label: 'GitHub', href: 'https://github.com/kaya2m' },
-              { icon: <Linkedin className="w-8 h-8" />, label: 'LinkedIn', href: 'https://www.linkedin.com/in/muhammet-kaya-60b36b213/' },
-              { icon: <Mail className="w-8 h-8" />, label: 'E-posta', href: 'mailto:mkaya349@hotmail.com' }
+              { icon: <Linkedin className="w-8 h-8" />, label: 'LinkedIn', href: 'https://www.linkedin.com/in/muhammet-kaya-ln' },
+              { icon: <Mail className="w-8 h-8" />, label: 'E-posta', href: 'mailto:mkaya349@hotmail.com' },
+              { icon: <img src="https://ignisfer.com/favicon.ico" alt="Ignisfer" className="w-8 h-8 rounded-full" />, label: 'Ignisfer', href: 'https://ignisfer.com/muhammetkaya' }
             ].map((social, index) => (
               <a 
                 key={social.label}
@@ -739,14 +803,14 @@ const Portfolio = () => {
                 id={`contact-${index}`}
                 style={{ transitionDelay: `${index * 150 + 400}ms` }}
               >
-                <div className="p-4 bg-blue-600/20 rounded-full group-hover:bg-blue-600/30 transition-all duration-300 group-hover:scale-110 mb-3">
+                <div className="p-4 bg-white/10 backdrop-blur-sm rounded-full border border-white/20 group-hover:bg-white/20 transition-all duration-300 group-hover:scale-110 mb-3 flex items-center justify-center">
                   {social.icon}
                 </div>
-                <span className="text-gray-300 group-hover:text-blue-400 transition-colors">{social.label}</span>
+                <span className="text-white/70 group-hover:text-blue-300 transition-colors">{social.label}</span>
               </a>
             ))}
           </div>
-          <button 
+          <button
             data-animate="fade-up"
             className={`px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full text-white font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-500 transform hover:scale-105 shadow-lg hover:shadow-xl ${
               visibleElements.has('contact-button') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
@@ -761,9 +825,9 @@ const Portfolio = () => {
       </section>
 
       {/* Footer */}
-      <footer className="py-8 px-4 border-t border-slate-800">
+      <footer className="py-8 px-4 border-t border-white/10 relative z-10 bg-white/5 backdrop-blur-sm">
         <div className="max-w-6xl mx-auto">
-          <div className="flex flex-col md:flex-row justify-between items-center text-gray-400">
+          <div className="flex flex-col md:flex-row justify-between items-center text-white/50">
             <p className="mb-4 md:mb-0">© 2025 Muhammet Kaya. Tüm hakları saklıdır.</p>
           </div>
         </div>
