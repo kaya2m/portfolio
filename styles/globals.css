@@ -1,26 +1,131 @@
 @import "tailwindcss";
 
+/* ==========================================================================
+   Datasheet
+   ---------------------------------------------------------------------------
+   The page is a printed specification, not a dark product page. Paper ground,
+   ink type, hairline rules instead of cards, mono for every label and number.
+   Two rules hold the whole thing together:
+     - Radius is 0. Everywhere, no exceptions.
+     - Structure is drawn with 1px rules; nothing floats on a shadow.
+   The single accent is the blue from the personal mark; ink carries the rest.
+   ========================================================================== */
+
+@theme {
+  --color-paper: #f2f2f1;
+  --color-panel: #ffffff;
+  --color-sunk: #eaeae7;
+
+  --color-ink: #101010;
+  --color-ink-2: #333331;
+  --color-mute: #6b6b68;
+  --color-faint: #94948f;
+
+  --color-rule: #dcdcd8;
+  --color-rule-strong: #b6b6b1;
+
+  --color-mark: #1a47c8;
+  --color-mark-deep: #12369e;
+  --color-mark-soft: rgba(26, 71, 200, 0.08);
+
+  --font-sans: "Geist", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-mono: "Geist Mono", ui-monospace, "SFMono-Regular", "Menlo", monospace;
+}
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  color-scheme: light;
+  --nav-height: 56px;
+  --gutter: 20px;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
+@media (min-width: 640px) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --gutter: 32px;
   }
 }
 
+html {
+  -webkit-tap-highlight-color: rgba(26, 71, 200, 0.14);
+}
+
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--color-paper);
+  color: var(--color-ink-2);
+  font-family: var(--font-sans);
+  font-feature-settings: "kern", "liga", "calt";
+  touch-action: manipulation;
+  overflow-x: hidden;
+}
+
+::selection {
+  background-color: rgba(26, 71, 200, 0.16);
+  color: var(--color-ink);
+}
+
+section[id] {
+  scroll-margin-top: calc(var(--nav-height) + 8px);
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-mark);
+  outline-offset: 2px;
+}
+
+/* --------------------------------------------------------------- helpers */
+
+.u-tabular {
+  font-variant-numeric: tabular-nums;
+}
+
+.u-balance {
+  text-wrap: balance;
+}
+
+.u-pretty {
+  text-wrap: pretty;
+}
+
+/* The mono label that names a field. The datasheet's smallest unit. */
+.u-key {
+  font-family: var(--font-mono);
+  font-size: 10.5px;
+  line-height: 1.4;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-faint);
+}
+
+/* Column rules that frame the page like a printed sheet. */
+.u-sheet {
+  border-left: 1px solid var(--color-rule);
+  border-right: 1px solid var(--color-rule);
+}
+
+/* A logo plate: fixed square, hairline rule, white ground so any mark reads. */
+.u-plate {
+  display: grid;
+  place-items: center;
+  background-color: var(--color-panel);
+  border: 1px solid var(--color-rule);
+}
+
+/* --------------------------------------------------------------- motion */
+
+/* Measured and sharp: state changes only, no entrance choreography. */
+* {
+  --tw-duration: 130ms;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
 }
